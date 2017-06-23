@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/ivImgPoster"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/poster_height"
+        tools:src="@drawable/face"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rlBackdrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+    <ImageView
+        android:id="@+id/ivFullBackdrop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:src="@drawable/face"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/ic_play_video"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_play_video"
+        />
+    </RelativeLayout>
+
+    <!-- Description + title-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Hello World"
+            android:textSize="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tvDescrpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_light"
+            android:text=" Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            android:textSize="15dp"
+            android:layout_marginLeft="@dimen/small_space"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

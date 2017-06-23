@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_space">8dp</dimen>
+    <dimen name="poster_height">300dp</dimen>
+    <dimen name="icon_size">70dp</dimen>
+</resources>

@@ -1,0 +1,64 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <variable
+            name="movieDetail"
+            type="com.iuh.thach.flicks.Movie"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+
+        <fragment
+            android:id="@+id/youtubeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment">
+        </fragment>
+
+        <TextView
+            android:id="@+id/tvTitle_dtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text='@{movieDetail.title}'
+            android:textSize="25sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tvReleaseDate_dtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_light"
+            android:text='@{movieDetail.releaseDate }'
+            android:textSize="15sp"
+            android:layout_marginLeft="@dimen/small_space"
+            />
+
+        <RatingBar
+            android:id="@+id/ratingMovie_dtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating='@{movieDetail.voteAverage}'
+            />
+
+        <TextView
+            android:id="@+id/tvDescrpt_dtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_light"
+            android:text='@{movieDetail.overview}'
+            android:textSize="15sp"
+            android:layout_marginLeft="@dimen/small_space"
+            />
+    </LinearLayout>
+
+</layout>
